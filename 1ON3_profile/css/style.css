@@ -97,7 +97,7 @@ body{
     font-size: 20px;
     border: 2px solid black;
     padding: 16px;
-    max-width: 150px;
+    max-width: 200px;
     text-align: center;
 }
 
@@ -107,5 +107,5 @@ body{
     text-transform: uppercase;
     font-weight: 700;
     font-family: 'Roboto', sans-serif;
-    padding: 20px;
+    position: relative;
 }
