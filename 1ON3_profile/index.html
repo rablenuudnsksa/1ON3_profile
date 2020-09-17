@@ -20,16 +20,25 @@
 
 <body>
     <div class="container">
-        <div class="header">
-            <div class="wrapper">
-                <div class="navigation">
-                    <img src="img/logo.png" alt="Logo" width="7%">
-                    <ul class="nav">
-                        <li><a href="https://fanlink.to/Independence-by-1ON3-Jandarm-EddieN">Independence</a></li>
-                        <li><a href="https://soundcloud.com/user-156534390/1on3-jandarm-eddie-n-silent-movie">Silent
-                                movie</a></li>
-                        <li><a href="https://fanlink.to/PlanetOfBaboons">Planet of baboons</a></li>
-                    </ul>
+        <div class="container">
+            <div class="header">
+                <div class="wrapper">
+                    <nav class="navigation">
+                        <img src="img/logo.png" alt="Logo" width="7%">
+                        <ul class="nav">
+                            <div class = "dropdown">
+                                <li><button onclick="myFunction()" class = dropbtn>Our contacts</button></li>
+                                <div id="myDropdown" class="dropdown-content">
+                                    <a href="#h">Home</a>
+                                    <a href="#">About</a>
+                                    <a href="#">Contact</a>
+                                    <a href="#">Contact</a>
+                                </div>
+                            </div>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Tracklist</a></li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </div>
@@ -42,11 +51,16 @@
                 <p class="description">by 1ON3 & Jandarm</p>
 
                 <div class="btns">
-                    <a class="btn" href="https://music.apple.com/us/artist/1on3/1498369981">Apple Music</a>
-                    <a class="btn" href="https://open.spotify.com/artist/4ABM98jkTdeLqDPsYnGyEb">Spotify</a>
-                    <a class="btn" href="https://soundcloud.com/user-156534390">Soundcloud</a>
+                    <div class="row">
+                        <div class="col"><a class="btn" href="https://music.apple.com/us/artist/1on3/1498369981">Apple
+                                Music</a></div>
+                        <div class="col"><a id="cntr_btn" class="btn"
+                                href="https://open.spotify.com/artist/4ABM98jkTdeLqDPsYnGyEb">Spotify</a></div>
+                        <div class="col"><a class="btn" href="https://soundcloud.com/user-156534390">Soundcloud</a>
+                        </div>
+                    </div>
                 </div>
-            
+
             </div>
         </div>
     </div>
@@ -139,6 +153,27 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+        <script>
+            /* When the user clicks on the button, 
+            toggle between hiding and showing the dropdown content */
+            function myFunction() {
+                document.getElementById("myDropdown").classList.toggle("show");
+            }
+    
+            // Close the dropdown if the user clicks outside of it
+            window.onclick = function (event) {
+                if (!event.target.matches('.dropbtn')) {
+                    var dropdowns = document.getElementsByClassName("dropdown-content");
+                    var i;
+                    for (i = 0; i < dropdowns.length; i++) {
+                        var openDropdown = dropdowns[i];
+                        if (openDropdown.classList.contains('show')) {
+                            openDropdown.classList.remove('show');
+                        }
+                    }
+                }
+            }
+        </script>
 </body>
 
 </html>
