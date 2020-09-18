@@ -26,8 +26,8 @@
                     <nav class="navigation">
                         <img src="img/logo.png" alt="Logo" width="7%">
                         <ul class="nav">
-                            <div class = "dropdown">
-                                <li><button onclick="myFunction()" class = dropbtn>Our contacts</button></li>
+                            <div class="dropdown">
+                                <li><button onclick="myFunction()" class=dropbtn>Our contacts</button></li>
                                 <div id="myDropdown" class="dropdown-content">
                                     <a href="#h">Home</a>
                                     <a href="#">About</a>
@@ -65,30 +65,71 @@
         </div>
     </div>
 
-    <div class="container">
-        <div class="page">
-            <div class="wrapper">
-                <h2 class="about">About us</h2>
-                <p>Hi everyone! I am musician 1ON3. My name is Ivan Zhylinkov</p>
-                <p>And I`m writing and record some music. Living in Kiyv. Studying in KPI\FICT</p>
-                <p>Now you can follow my web pages or write to me</p>
-                <ul>
-                    <li><a href="https://www.instagram.com/i_____one/">Instagram</a></li>
-                    <li><a href="https://t.me/i_ON3">Telegram</a></li>
-                </ul>
+    <div class="wrapper">
+        <div class="row">
+            <div id="track_col1" class="column">
+
+                <div id="card_track1" class="card">
+                    <img src="img/Independence.png" alt='Cover of "Independence"' height="375px" class="cover">
+                    <div class="container">
+                        <div class="overlay">
+                            <div class="listen">
+                                <a href="#" class="a_listen">Click to listen</a>
+                            </div>
+                        </div>
+                        <div class="track_names">
+                            <h2>Independence</h2>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="track_col2" class="column">
+                <div id="card_track2" class="card">
+                    <img src="img/Independence.png" alt='Cover of "Silent Movie"' height="375px" class="cover">
+                    <div class="container">
+                        <div class="overlay">
+                            <div class="listen">
+                                <a href="#" class="a_listen">Click to listen</a>
+                            </div>
+                        </div>
+                        <div class="track_names">
+                            <h2>Silent Movie</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="track_col3" class="column">
+                <div id="card_track3" class="card">
+                    <img src="img/Planet of baboons.png" alt='Cover of "Planet of Baboons"' height="375px"
+                        class="cover">
+                    <div class="container">
+                        <div class="overlay">
+                            <div class="listen">
+                                <a href="#" class="a_listen">Click to listen</a>
+                            </div>
+                        </div>
+                        <div class="track_names">
+                            <h2>Planet of Baboons</h2>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
 
     <div class="row">
         <div class="column">
             <div class="card">
                 <img src="img/1ON3.jpg" alt="Ivan" width="100%">
                 <div class="container">
+
                     <h2>1ON3</h2>
                     <p class="title_member">Musician</p>
-                    <p>Text</p>
+                    <p>My name is Ivan. I am one of the performers of the tracks that are presented on this site. I have
+                        an unusual feature: I celebrate my birthday 365 times a year.</p>
                     <p>opppyshow@gmail.com</p>
                     <p><button class="button">Contact</button></p>
                 </div>
@@ -101,7 +142,8 @@
                 <div class="container">
                     <h2>Jandarm</h2>
                     <p class="title_member">Musician</p>
-                    <p>Text</p>
+                    <p>My name is Yaroslav. I am also one of the track artists. I can improvise to any music, coming up
+                        with lyrics for it. I will find a way to agree in any situation.</p>
                     <p>yaroslav.kuzmuk@gmail.com</p>
                     <p><button class="button">Contact</button></p>
                 </div>
@@ -114,7 +156,8 @@
                 <div class="container">
                     <h2>Kate Kolbasova</h2>
                     <p class="title_member">Photo designer</p>
-                    <p>Text</p>
+                    <p>My name is Ekaterina. I created this site together with these guys. Mathematician and the queen
+                        of FIСT in one. I also like playing volleyball.</p>
                     <p>kn.kolbasova52@gmail.com</p>
                     <p><button class="button">Contact</button></p>
                 </div>
@@ -127,7 +170,8 @@
                 <div class="container">
                     <h2>Anna Anchishkina</h2>
                     <p class="title_member">Anna</p>
-                    <p>Text</p>
+                    <p>My name is Anna. I participated in the creation of this site. And some information about me: I
+                        dance anytime and anywhere, sing and learn to play the ukulele.</p>
                     <p>annaan2002@gmail.com</p>
                     <p><button class="button">Contact</button></p>
                 </div>
@@ -153,27 +197,27 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-        <script>
-            /* When the user clicks on the button, 
-            toggle between hiding and showing the dropdown content */
-            function myFunction() {
-                document.getElementById("myDropdown").classList.toggle("show");
-            }
-    
-            // Close the dropdown if the user clicks outside of it
-            window.onclick = function (event) {
-                if (!event.target.matches('.dropbtn')) {
-                    var dropdowns = document.getElementsByClassName("dropdown-content");
-                    var i;
-                    for (i = 0; i < dropdowns.length; i++) {
-                        var openDropdown = dropdowns[i];
-                        if (openDropdown.classList.contains('show')) {
-                            openDropdown.classList.remove('show');
-                        }
+    <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
                     }
                 }
             }
-        </script>
+        }
+    </script>
 </body>
 
 </html>
