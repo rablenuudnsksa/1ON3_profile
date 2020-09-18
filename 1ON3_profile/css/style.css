@@ -1,13 +1,16 @@
-body{   /*Settings to all page*/
+/*Settings to all page*/
+body{   
     background-color: #eaeaea; 
     font-family: 'Montserrat', sans-serif;
 }
 
-.conteiner{   /**Bootstrap*/
+/*Bootstrap*/
+.conteiner{   
     display: flex;
 }
 
-.wrapper{
+/*wrapper with padding on the sides*/
+.wrapper{   
     padding-left: 15px;
     padding-right: 15px;
     max-width: 1170px;
@@ -15,7 +18,8 @@ body{   /*Settings to all page*/
     position: relative;
 }
 
-.navigation{
+/*Navigation items*/
+.navigation{    
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -23,7 +27,8 @@ body{   /*Settings to all page*/
     padding-bottom: 40px;
 }
 
-.nav{
+/*Setting font size and style for nav items*/
+.nav{         
     display: flex;
     list-style-type: none;
     padding-left: 0;
@@ -31,27 +36,31 @@ body{   /*Settings to all page*/
     text-transform: uppercase;
 }
 
+/*Setting distance between nav items*/
 .nav>li{
     padding-left: 23px;
     margin-left: 23px;
     position: relative;
 }
 
-
+/*Setting first item*/
 .nav>li:first-child::before{
     display: none;
 }
 
+/*Setting dropdown links without styling links*/
 .dropdown a {
     text-decoration: none;
     color: #494949;
 }
 
+/**/
 .dropdown {
   position: relative;
   display: inline-block;
 }
 
+/*Setting style for dropbutton*/
 .dropbtn {
   background-color: #eaeaea;
   color: #494949;
@@ -105,6 +114,7 @@ body{   /*Settings to all page*/
     transition-delay: 0.7s ease-out;
 }
 
+/*BANNER*/
 .banner{
     background-image: url(../img/banner.jpg);
     background-repeat: no-repeat;
@@ -114,12 +124,14 @@ body{   /*Settings to all page*/
     padding-bottom: 285px;
 }
 
+/*"Listen and enjoy"*/
 .title{
     font-size: 50px;
     text-align: center;
     font-weight: 700;
     text-shadow: 0 2px 5px black;
 }
+/*"by 1ON3 & Jandarm"*/
 .description{
     font-size: 25px;
     text-align: center;
@@ -129,16 +141,17 @@ body{   /*Settings to all page*/
     
 }
 
+/*Buttons of AM, Spotify and Soundcloud*/
 .btns{
     display: flex;
     justify-content: space-evenly;
 }
-
 .btn:hover{
     color: #eaeaea;
     background-color: #212529;
 }
 
+/*Style of btn*/
 .btn{
     display: block;
     color: black;
@@ -150,12 +163,12 @@ body{   /*Settings to all page*/
     padding: 16px;
     text-align: center;
 }
-#cntr_btn{
+#cntr_btn{  /*Margin to left and right btns*/
     margin-left: 50px;
     margin-right: 50px;
 }
 
-
+/*BOOTSTRAP GRID*/
 #track_col1, #track_col2, #track_col3{
   float: left;
   width: 33.3%;
@@ -185,11 +198,13 @@ body{   /*Settings to all page*/
     min-height: 770px;
     font-size: 15px;
   }
-
+  
+  /*Height of cards to align them*/
   #card_track1, #card_track2, #card_track3{
     min-height: 415px;
   }
 
+  /*COVERS*/
   .cover {
     display: block;
     width: 100%;
@@ -199,6 +214,7 @@ body{   /*Settings to all page*/
     opacity: 1;
   }
 
+  /*"Click to listen"*/
   .listen {
     color: white;
     font-size: 20px;
@@ -209,6 +225,7 @@ body{   /*Settings to all page*/
     -ms-transform: translate(-50%, -50%);
   }
 
+  /*Fade overlay of cards*/
   .overlay {
     position: absolute;
     top: 0;
@@ -221,12 +238,23 @@ body{   /*Settings to all page*/
     transition: .5s ease;
     background-color: #8660c5;
   }
-
+  /*Contrasting text in the overlay*/
   .a_listen, .a_listen:hover{
     text-decoration: none;
     color: #f1f1f1;
   }
+    
+  /*Role of each team memb*/
+  .role {
+    color: #8660c5;
+  }
   
+  /*Stylizing of track names*/
+  .track_names{
+    text-align: center;
+  }
+  
+  /*TEAM MEMBERS CARDS*/
   /* Some left and right padding inside the container */
   .container {
     padding: 0 16px;
@@ -238,15 +266,8 @@ body{   /*Settings to all page*/
     clear: both;
     display: table;
   }
-  
-  .title_member {
-    color: #8660c5;
-  }
 
-  .track_names{
-    text-align: center;
-  }
-  
+  /*Button "Contact of each TM"*/
   .button {
     border: none;
     outline: 0;
@@ -261,7 +282,6 @@ body{   /*Settings to all page*/
     bottom: 15px;
     right: 10px;
   }
-  
   .button:hover {
     background-color: #8660c5;
   }

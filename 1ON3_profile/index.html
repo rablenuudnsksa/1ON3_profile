@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>1ON3</title>
-
+    <!-- Connecting bootstrap from site -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+    <!-- Connecting fonts from google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,900&display=swap"
         rel="stylesheet">
-
+    <!-- Connecting css and js files from project-->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/mscript.js"></script>
@@ -21,15 +21,21 @@
 <body>
     <div class="container">
         <div class="container">
-            <div class="header">
+            
+            <!-- Header of site -->
+            <div class="header">    
                 <div class="wrapper">
+                    
+                    <!-- Navigation -->
                     <nav class="navigation">
-                        <img src="img/logo.png" alt="Logo" width="7%">
-                        <ul class="nav">
+                         <img src="img/logo.png" alt="Logo" width="7%">     <!--Logo of site -->
+                        <!-- Navigation list with links -->
+                         <ul class="nav">
+                             <!-- Dropdown list with func -->
                             <div class="dropdown">
                                 <li><button onclick="myFunction()" class=dropbtn>Our contacts</button></li>
                                 <div id="myDropdown" class="dropdown-content">
-                                    <a href="#h">Home</a>
+                                    <a href="#">Home</a>
                                     <a href="#">About</a>
                                     <a href="#">Contact</a>
                                     <a href="#">Contact</a>
@@ -44,12 +50,14 @@
         </div>
     </div>
 
+    <!-- Banner -->
     <div class="container-fluid">
         <div class="banner">
             <div class="wrapper">
                 <h1 class="title">Listen and enjoy</h1>
                 <p class="description">by 1ON3 & Jandarm</p>
 
+                <!-- Buttons with bootstrap grid -->
                 <div class="btns">
                     <div class="row">
                         <div class="col"><a class="btn" href="https://music.apple.com/us/artist/1on3/1498369981">Apple
@@ -65,10 +73,13 @@
         </div>
     </div>
 
+    <!-- Covers of tracks with links -->
     <div class="wrapper">
-        <div class="row">
+        <!--Bootstrap grid-->
+        <div class="row">   
+            
+            <!-- First cover -->
             <div id="track_col1" class="column">
-
                 <div id="card_track1" class="card">
                     <img src="img/Independence.png" alt='Cover of "Independence"' height="375px" class="cover">
                     <div class="container">
@@ -82,9 +93,9 @@
                         </div>
                     </div>
                 </div>
-
             </div>
 
+            <!-- Second cover -->
             <div id="track_col2" class="column">
                 <div id="card_track2" class="card">
                     <img src="img/Independence.png" alt='Cover of "Silent Movie"' height="375px" class="cover">
@@ -101,6 +112,7 @@
                 </div>
             </div>
 
+            <!-- Third cover -->
             <div id="track_col3" class="column">
                 <div id="card_track3" class="card">
                     <img src="img/Planet of baboons.png" alt='Cover of "Planet of Baboons"' height="375px"
@@ -120,66 +132,95 @@
         </div>
     </div>
 
+    <!-- Team cards -->
     <div class="row">
+        
+        <!-- Ivan`s card -->
         <div class="column">
             <div class="card">
                 <img src="img/1ON3.jpg" alt="Ivan" width="100%">
+                
                 <div class="container">
-
                     <h2>1ON3</h2>
-                    <p class="title_member">Musician</p>
+                    <p class="role">Musician</p>
+                    <!-- Description of team member -->
                     <p>My name is Ivan. I am one of the performers of the tracks that are presented on this site. I have
                         an unusual feature: I celebrate my birthday 365 times a year.</p>
+                    <!-- Gmail -->
                     <p>opppyshow@gmail.com</p>
+
+                    <!-- Contact button -->
                     <p><button class="button">Contact</button></p>
                 </div>
+
             </div>
         </div>
 
+        <!-- Yaroslav`s card -->
         <div class="column">
             <div class="card">
                 <img src="img/Jandarm.jpg" alt="Yaroslav" width="100%">
+                
                 <div class="container">
                     <h2>Jandarm</h2>
-                    <p class="title_member">Musician</p>
+                    <p class="role">Musician</p>
+                     <!-- Description of team member -->
                     <p>My name is Yaroslav. I am also one of the track artists. I can improvise to any music, coming up
                         with lyrics for it. I will find a way to agree in any situation.</p>
+                    <!-- Gmail -->
                     <p>yaroslav.kuzmuk@gmail.com</p>
+                    
+                    <!-- Contact button -->
                     <p><button class="button">Contact</button></p>
                 </div>
+
             </div>
         </div>
 
+        <!-- Kate`s card -->
         <div class="column">
             <div class="card">
                 <img src="img/Kate.JPG" alt="Kate" width="100%">
+                
                 <div class="container">
                     <h2>Kate Kolbasova</h2>
-                    <p class="title_member">Photo designer</p>
+                    <p class="role">Photo designer</p>
+                     <!-- Description of team member -->
                     <p>My name is Ekaterina. I created this site together with these guys. Mathematician and the queen
                         of FIСT in one. I also like playing volleyball.</p>
+                    <!-- Gmail -->
                     <p>kn.kolbasova52@gmail.com</p>
+                    
+                    <!-- Contact button -->
                     <p><button class="button">Contact</button></p>
                 </div>
+
             </div>
         </div>
 
+        <!-- Anna`s card -->
         <div class="column">
             <div class="card">
                 <img src="img/Anna.JPG" alt="Anna" width="100%">
+                
                 <div class="container">
                     <h2>Anna Anchishkina</h2>
-                    <p class="title_member">Anna</p>
+                    <p class="role">Anna</p>
+                     <!-- Description of team member -->
                     <p>My name is Anna. I participated in the creation of this site. And some information about me: I
                         dance anytime and anywhere, sing and learn to play the ukulele.</p>
+                    <!-- Gmail -->
                     <p>annaan2002@gmail.com</p>
+                    
+                    <!-- Contact button -->
                     <p><button class="button">Contact</button></p>
                 </div>
+
             </div>
         </div>
     </div>
 
-
+    <!-- Footer -->
     <div class="container">
         <div class="footer">
             <div class="wrapper">
@@ -188,6 +229,7 @@
         </div>
     </div>
 
+    <!-- Linking bootstrap files -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
@@ -197,6 +239,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+    
+    <!-- Dropdownscript -->
     <script>
         /* When the user clicks on the button, 
         toggle between hiding and showing the dropdown content */
@@ -218,6 +262,7 @@
             }
         }
     </script>
+
 </body>
 
 </html>
