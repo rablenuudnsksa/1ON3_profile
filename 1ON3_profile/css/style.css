@@ -1,7 +1,10 @@
 /*Settings to all page*/
-body{   
-    background-color: #eaeaea; 
+body{    
     font-family: 'Montserrat', sans-serif;
+    background-image: url(../img/back.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
 
 /*Bootstrap*/
@@ -62,12 +65,16 @@ body{
 
 /*Setting style for dropbutton*/
 .dropbtn {
-  background-color: #eaeaea;
+  background: transparent;
+  box-shadow: 0px 0px 0px transparent;
+  border: 0px solid transparent;
+  text-shadow: 0px 0px 0px transparent;
+  padding-left: 23px;
+  margin-left: 23px;
   color: #494949;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 16px;
-  border: none;
   cursor: pointer;
 }
 
@@ -129,7 +136,7 @@ body{
     font-size: 50px;
     text-align: center;
     font-weight: 700;
-    text-shadow: 0 2px 5px black;
+    text-shadow: 0 2px 5px #da8063;
 }
 /*"by 1ON3 & Jandarm"*/
 .description{
@@ -168,6 +175,15 @@ body{
     margin-right: 50px;
 }
 
+/*Header "Tracklist" & "About Us"*/
+.title2{
+  font-size: 30px;
+  text-align: center;
+  font-weight: 100;
+  text-shadow: 0 1px 3px black;
+}
+
+
 /*BOOTSTRAP GRID*/
 #track_col1, #track_col2, #track_col3{
   float: left;
@@ -186,7 +202,8 @@ body{
 
   /* Display the columns below each other instead of side by side on small screens */
   @media screen and (max-width: 650px) {
-    .column {
+    .column,  #track_col1, 
+    #track_col2, #track_col3{
       width: 100%;
       display: block;
     }
@@ -195,14 +212,11 @@ body{
   /* Add some shadows to create a card effect */
   .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    min-height: 770px;
+    min-height: 730px;
     font-size: 15px;
   }
   
-  /*Height of cards to align them*/
-  #card_track1, #card_track2, #card_track3{
-    min-height: 415px;
-  }
+
 
   /*COVERS*/
   .cover {
@@ -214,15 +228,30 @@ body{
     opacity: 1;
   }
 
+  /*Height of cards to align them*/
+  #card_track1, #card_track2, #card_track3{
+    min-height: 415px;
+  }
+  
+  /*Stylizing of track names*/
+  .track_names{
+    text-align: center;
+      
+  }
+    
+
   /*"Click to listen"*/
   .listen {
     color: white;
     font-size: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
+   
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    overflow: hidden;
+    margin-top: 47.5%;
   }
 
   /*Fade overlay of cards*/
@@ -236,30 +265,33 @@ body{
     width: 100%;
     opacity: 0;
     transition: .5s ease;
-    background-color: #8660c5;
+    background-image: url("../img/play.PNG") !important;
+    background-size: contain;
+    background-repeat: no-repeat;
+
   }
   /*Contrasting text in the overlay*/
   .a_listen, .a_listen:hover{
+    display: block;
     text-decoration: none;
-    color: #f1f1f1;
+    color: black;
+    font-weight: bold;
   }
     
-  /*Role of each team memb*/
-  .role {
-    color: #8660c5;
-  }
-  
-  /*Stylizing of track names*/
-  .track_names{
-    text-align: center;
-  }
-  
+
   /*TEAM MEMBERS CARDS*/
   /* Some left and right padding inside the container */
   .container {
     padding: 0 16px;
   }
   
+  /*Role of each team memb*/
+  .role {
+    color: #8660c5;
+    font-size: 18px;
+  }
+    
+    
   /* Clear floats */
   .container::after, .row::after {
     content: "";
@@ -267,22 +299,18 @@ body{
     display: table;
   }
 
-  /*Button "Contact of each TM"*/
-  .button {
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 8px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor: pointer;
-    width: 95%;
-    position: absolute;
-    bottom: 15px;
-    right: 10px;
+  .footer {
+    height: 35px;
+    background-color: #290d0d;
   }
-  .button:hover {
-    background-color: #8660c5;
+  
+  .centerfooter {
+    height: 100%;
+    width: 800px;
   }
 
+  .footer p {
+    padding-top: 5px;
+    color: #fff;
+    text-align: left;
+  }
