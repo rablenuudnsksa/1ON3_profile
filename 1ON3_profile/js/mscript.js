@@ -19,3 +19,12 @@
                 }
             }
         }
+
+/*jQuery code*/
+$(document).ready(function()
+{
+    $('#btn_jQuery').on('click', function()
+    {
+        alert("Hello! It`s me.");
+    });
+});
