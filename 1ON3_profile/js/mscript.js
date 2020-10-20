@@ -20,6 +20,16 @@
             }
         }
 
+        /* Set the width of the sidebar to 250px (show it) */
+function openNav() {
+    document.getElementById("myPlaylists").style.width = "250px";
+  }
+  
+  /* Set the width of the sidebar to 0 (hide it) */
+  function closeNav() {
+    document.getElementById("myPlaylists").style.width = "0";
+  }
+
 /*jQuery code*/
 $(document).ready(function()
 {
