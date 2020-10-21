@@ -22,7 +22,7 @@
 
         /* Set the width of the sidebar to 250px (show it) */
 function openNav() {
-    document.getElementById("myPlaylists").style.width = "250px";
+    document.getElementById("myPlaylists").style.width = "400px";
   }
   
   /* Set the width of the sidebar to 0 (hide it) */
@@ -31,10 +31,14 @@ function openNav() {
   }
 
 /*jQuery code*/
-$(document).ready(function()
-{
-    $('#btn_jQuery').on('click', function()
+/*$(document).ready(function()
+{*/
+    function ShowName()
     {
-        alert("Hello! It`s me.");
-    });
-});
+        let playlistName = $("#playlistName").val();
+        $("#plylstNm").html(playlistName);
+        // let playlistDescription = $("playlistDescription").val();
+        // $("#plystDscrptn").html(playlistDescription);
+    }
+
+// });

@@ -129,7 +129,7 @@ body{
   z-index: 1; /* Stay on top */
   top: 0;
   left: 0;
-  background-color: black; /* Black*/
+  background-color: #212529;
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 60px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
@@ -148,6 +148,8 @@ body{
 /* When you mouse over the navigation links, change their color */
 .playlists a:hover {
   color:  #8660c5;
+  transition: 0.5s ease-out;
+  transition-delay: 0.7s ease-out;
 }
 
 /* Position and style the close button (top right corner) */
@@ -176,6 +178,8 @@ body{
 
 .openbtn:hover {
   color: #8660c5;
+  transition: 0.5s ease-out;
+  transition-delay: 0.7s ease-out;
 
 }
 .playlists .addbtn {
@@ -363,26 +367,23 @@ body{
     display: table;
   }
 
-  /*Pop-up Window*/
-  #blackout {
-    background: rgba(12, 9, 9, 0.5);
+  /*POP-UP WINDOW*/
+   #blackout {   /*BLACKOUT */
+    background: rgba(12, 9, 9, 0.5);  /*blackout color*/
     width: 100%;
     height: 100%;
-    
     position: fixed;
     top: 0;
     left: 0;
     display: none;
-    overflow-y: scroll;
+    overflow-y: scroll;     /*solves problem of scrolling*/
   }
 
-  .window {
+  .window {     /*window*/
     width: 500px;
     height: 500px;
     text-align: center;
-    /*padding: 15px;*/
-    border: 3px solid #8660c5;
-    /*border-radius: 10px;*/
+    border: 3px solid #8660c5; /*window border*/
     color: #8660c5;
     position: absolute;
     top: 0;
@@ -398,15 +399,17 @@ body{
       display: inline-block;
       text-decoration: none;
       width: 100%;
-      padding-left: 950px;
       cursor:pointer;
+      padding-left: 450px;
     }
-  .cross{
-    width: 50%;
-    height: 50%;
+  .cross{     /*cross to close the window*/
+    width: 100%;
+    height: 100%;
     padding-top: 8px;
-
+    padding-right: 8px;
   }
+
+  /*FORM*/
   .ui-form {
     max-width: 350px;
     padding: 80px 30px 30px;

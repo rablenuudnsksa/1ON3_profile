@@ -15,49 +15,54 @@
     <!-- Connecting css and js files from project-->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Linking jquery lib and javascript file -->
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/mscript.js"></script>
 </head>
 
 <body>
     <div class="container">
-        <div class="container">
 
-            <!-- Header of site -->
-            <div class="header">
-                <div class="wrapper">
 
-                    <!-- Navigation -->
-                    <nav class="navigation">
-                        <img src="img/logo.png" alt="Logo" width="7%">
-                        <!--Logo of site -->
-                        <!-- Navigation list with links -->
-                        <ul class="nav">
-                            <li><a href="#t1">Tracklist</a></li>
-                            <li><a href="#t2">About us</a></li>
-                            <!-- Dropdown list with func -->
-                            <div class="dropdown">
-                                <li><button onclick="myFunction()" class=dropbtn>Our contacts</button></li>
-                                <div id="myDropdown" class="dropdown-content">
-                                    <a target="_blank" href="https://www.instagram.com/i_____one/">1ON3</a>
-                                    <a target="_blank" href="https://www.instagram.com/j_a_n_d_a_r_m/">Jandarm</a>
-                                    <a target="_blank" href="https://www.instagram.com/its.tenderness/">Kate</a>
-                                    <a target="_blank" href="https://www.instagram.com/rablenuudnsksa/">Anna</a>
-                                </div>
+        <!-- Header of site -->
+        <div class="header">
+            <div class="wrapper">
+
+                <!-- Navigation -->
+                <nav class="navigation">
+                    <img src="img/logo.png" alt="Logo" width="7%">
+                    <!--Logo of site -->
+                    <!-- Navigation list with links -->
+                    <ul class="nav">
+                        <li><a href="#t1">Tracklist</a></li>
+                        <li><a href="#t2">About us</a></li>
+                        <!-- Dropdown list with func -->
+                        <div class="dropdown">
+                            <li><button onclick="myFunction()" class=dropbtn>Our contacts</button></li>
+                            <div id="myDropdown" class="dropdown-content">
+                                <a target="_blank" href="https://www.instagram.com/i_____one/">1ON3</a>
+                                <a target="_blank" href="https://www.instagram.com/j_a_n_d_a_r_m/">Jandarm</a>
+                                <a target="_blank" href="https://www.instagram.com/its.tenderness/">Kate</a>
+                                <a target="_blank" href="https://www.instagram.com/rablenuudnsksa/">Anna</a>
                             </div>
-                            
-                            <!--Playlist button-->
-                            <div id="myPlaylists" class="playlists">
-                                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                                <a href="javascript:void(0)" class="addbtn">&#10010;</a>
-                                <a href="#">Playlist #1</a>
-                                <a href="#">Playlist #2</a>
-                                <a href="#">Playlist #3</a>
-                              </div>
-                              <li><button class="openbtn" onclick="openNav()"> my playlists</button></li>
-                        </ul>
-                    </nav>
-                </div>
+                        </div>
+
+                        <!--Playlist button-->
+                        <div id="myPlaylists" class="playlists">
+                            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                            <a href="#blackout" href="javascript:void(0)" class="addbtn">&#10010;</a>
+                            <a href="#"><label id="plylstNm"></label></a>
+                            <a href="#"><label id="plystDscrptn"></label></a>
+                            <a href="#">Playlist #2</a>
+                            <a href="#">Playlist #3</a>
+                        </div>
+                        <li><button class="openbtn" onclick="openNav()"> my playlists</button></li>
+                    </ul>
+                </nav>
             </div>
         </div>
+
     </div>
 
     <!-- Banner -->
@@ -236,27 +241,24 @@
         <div id="blackout">
             <div class="window">
 
-                <a href="#" class="close" ><img class="cross" 
-                src="img/cross.png" alt="close window"></a>
+                <a href="#" class="close"><img class="cross" src="img/cross.png" alt="close window"></a>
                 <form action="" class="ui-form">
-                     <div class="form-row">
-                      <input type="text" id="Name" required autocomplete="off">
-                      <label for="Name">Name</label>
+
+                    <div class="form-row">
+                        <input type="text" id="playlistName">
+                        <label for="Name">Name</label>
                     </div>
                     <div class="form-row">
-                      <!-- <input type="text" id="Description" required autocomplete="off">
-                      <label for="Description">Description</label> -->
-                      
-                      <textarea rows = "3" id="Description" required></textarea>
-                      <label for="Description">Description</label>
+
+                        <textarea rows="3" id="playlistDescription" required></textarea>
+                        <label for="Description">Description</label>
                     </div>
-                    <p><input type="submit" value="Create"></p>
-                  </form>
+                    <input type="button" value="Create" onclick="ShowName();"/>
+                </form>
             </div>
         </div>
     </div>
 
-    <a id="btn_add" href="#blackout">Add playlist</a>
 
     <!-- Footer -->
     <div class="container">
@@ -280,9 +282,7 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
 
-    <!-- Linking jquery lib and javascript file -->
-    <script src="js/jquery-3.5.1.min.js"></script>
-    <script src="js/mscript.js"></script>
+    
 
 </body>
 
