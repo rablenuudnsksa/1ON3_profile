@@ -41,6 +41,7 @@
                         <div class="dropdown">
                             <li><button onclick="myFunction()" class=dropbtn>Our contacts</button></li>
                             <div id="myDropdown" class="dropdown-content">
+                                <!-- Instagram links -->
                                 <a target="_blank" href="https://www.instagram.com/i_____one/">1ON3</a>
                                 <a target="_blank" href="https://www.instagram.com/j_a_n_d_a_r_m/">Jandarm</a>
                                 <a target="_blank" href="https://www.instagram.com/its.tenderness/">Kate</a>
@@ -50,14 +51,16 @@
 
                         <!--Playlist button-->
                         <div id="myPlaylists" class="playlists">
-                            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                            <a href="#blackout" href="javascript:void(0)" class="addbtn">&#10010;</a>
+                            <!-- Cross bnt to close playlist menu -->
+                            <a href="javascript:void(0)" class="closebtn">&times;</a>
+                            <!-- First playlist -->
+                            <a href="javascript:void(0)" class="show_popup" rel="popup1">&#10010;</a>
                             <a href="#"><label id="plylstNm"></label></a>
-                            <a href="#"><label id="plystDscrptn"></label></a>
+                            <!-- <a href="#"><label id="plystDscrptn"></label></a> -->
                             <a href="#">Playlist #2</a>
                             <a href="#">Playlist #3</a>
                         </div>
-                        <li><button class="openbtn" onclick="openNav()"> my playlists</button></li>
+                        <li><button class="openbtn"> my playlists</button></li>
                     </ul>
                 </nav>
             </div>
@@ -238,27 +241,40 @@
 
     <!--Pop-up window fop playlists list-->
     <div class="container">
-        <div id="blackout">
-            <div class="window">
+        <!-- Blackout around the window -->
 
-                <a href="#" class="close"><img class="cross" src="img/cross.png" alt="close window"></a>
-                <form action="" class="ui-form">
+        <div class="overlay_popup"></div>
 
+
+        <div class="popup" id="popup1">
+
+            <div class="object">
+
+                <!-- Playlist form (name + description) -->
+                <form class="ui-form" action="" method="">
+                    <div class="newPlaylistHeader">
+                        <h1 class="title2">New Playlist</h1>
+                    </div>
                     <div class="form-row">
                         <input type="text" id="playlistName">
                         <label for="Name">Name</label>
                     </div>
-                    <div class="form-row">
 
-                        <textarea rows="3" id="playlistDescription" required></textarea>
+                    <div class="form-row">
+                        <input type="text" id="playlistDescription">
                         <label for="Description">Description</label>
                     </div>
-                    <input type="button" value="Create" onclick="ShowName();"/>
+
+                    <div class="btn_create">
+                        <input type="button" value="Create" />
+                    </div>
                 </form>
             </div>
         </div>
     </div>
 
+
+    
 
     <!-- Footer -->
     <div class="container">
@@ -282,7 +298,7 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
 
-    
+
 
 </body>
 
