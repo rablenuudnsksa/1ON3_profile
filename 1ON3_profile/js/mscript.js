@@ -26,46 +26,54 @@
 /*jQuery code*/
 $(document).ready(function()
 {
-    
+    // Fuction that SHOWS pop-up window
+    $('.show_popup').click(function() { // Вызываем функцию по нажатию на кнопку
+        var popup_id = $('#' + $(this).attr("rel")); // Связываем rel и popup_id
+        $('.popup').show(); // Открываем окно
+        $('.overlay_popup').show(); // Открываем блок заднего фона
+    });
+    // Function that HIDES pop-up window
+    $('.overlay_popup').click(function() { // Обрабатываем клик по заднему фону
+        $('.overlay_popup, .popup').hide(); // Скрываем затемнённый задний фон и основное всплывающее окно
+    });
+
+                            /*BUTTONS*/
+    // Opens Playlist Menu
     $('.openbtn').on("click", function(){
         openPlaylistMenu();
     });
+    // Closes Playlist Menu
     $('.closebtn, .show_popup').on("click", function(){
         closePlaylistMenu();
-    })
+    });
+    
+    // Button "Create" in pop-up window (opens pl menu,
+    // hides pop-up window and shows pl name
     $('.btn_create input').on("click", function(){
         ShowName();
         openPlaylistMenu();
         $('.overlay_popup, .popup').hide();
     });
 
-    $('.show_popup').click(function() { // Вызываем функцию по нажатию на кнопку
-        var popup_id = $('#' + $(this).attr("rel")); // Связываем rel и popup_id
-        $('.popup').show(); // Открываем окно
-        $('.overlay_popup').show(); // Открываем блок заднего фона
-    });
-    $('.overlay_popup').click(function() { // Обрабатываем клик по заднему фону
-        $('.overlay_popup, .popup').hide(); // Скрываем затемнённый задний фон и основное всплывающее окно
-    });
-
+    /*Opens playlist form (featuring)*/
     $("#plylstNm").on('click', function()
     {
-        
         closePlaylistMenu();
+
     });
     
 });
 
 
-/**/
+/*Function that shows pl name in PL MENU*/
     function ShowName()
     {
-        /**/
+        /*Reads pl NAME*/
         let playlistName = $("#playlistName").val();
         $("#plylstNm").html(playlistName);
-        /**/
-        let playlistDescription = $("playlistDescription").val();
-        $("#plystDscrptn").html(playlistDescription);
+        
+        // let playlistDescription = $("playlistDescription").val();
+        // $("#plystDscrptn").html(playlistDescription);
     }
 
     

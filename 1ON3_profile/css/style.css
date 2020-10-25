@@ -123,10 +123,10 @@ body{
 
 /* The playlists menu */
 .playlists {
-  height: 1000px; /* Specify a height */
-  width: 0; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
+  height: 1000px; 
+  width: 0; 
+  position: fixed; 
+  z-index: 1; 
   top: 0;
   left: 0;
   background-color: #212529;
@@ -176,17 +176,17 @@ body{
   text-shadow: 0px 0px 0px transparent;
 }
 
+/*"My playlists, that shows pl menu"*/
 .openbtn:hover {
   color: #8660c5;
   transition: 0.5s ease-out;
   transition-delay: 0.7s ease-out;
 
 }
-
 .openbtn, .openbtn:active, .openbtn:focus{
   outline: none;
 }
-.playlists .show_popup {
+.playlists .show_popup {/*Style of pl menu links*/
   position: absolute;
   color: white;
   top: 0;
@@ -373,23 +373,21 @@ body{
 
   /*=================================POP-UP WINDOW========================*/
    .overlay_popup {   /*BLACKOUT */
-    /*      
-    z-index: 999; */
-    display:none;
+    display:none;   /*Hidden at start*/
     position:fixed;
     width: 100%;
     height: 100%;
-    /* z-index: 999; */
     top:0;
     right:0;
     left:0;
     bottom:0;
-    background:#000;
+    background:#000;    /*blackout*/
     opacity:0.5;
     /* overflow-y: scroll; ??????*/
   }
 
-  .popup {     /*window*/
+  /*pop-up window*/
+  .popup {     
     display: none;
     position: absolute;
     top: 0;
@@ -400,8 +398,8 @@ body{
     width: 500px;
     height: 500px;
     text-align: center;
-    border: 3px solid #8660c5;
-    color: #8660c5;
+    border: 3px solid #8660c5;  /*border of pop-up window*/
+    color: #8660c5;   /*text color*/
     background: #fff;
     padding: 50px 70px;
   }
@@ -414,13 +412,18 @@ body{
     margin: 10px auto 10px;
     background: white;
   }
+  /*Header of pl pop-up window*/
   .newPlaylistHeader{
     margin-bottom: 100px;
   }
+
+
   .form-row {
     position: relative;
     margin-bottom: 40px;
   }
+
+  /*INPUT pop-up design*/
   .form-row input {
     display: block;
     width: 100%;
@@ -430,8 +433,9 @@ body{
     background: none;
     border-width: 0;
     border-bottom: 2px solid #8660c5;
-    transition: all 0.2s ease;
+    transition: all 0.5s ease;
   }
+  /*LABEL pop-up design*/
   .form-row label {
     position: absolute;
     left: 13px;
@@ -448,7 +452,6 @@ body{
     outline: 0;
     border-color: #da8063;
   }
-  
   .form-row input:focus + label 
   { 
     border-color: #da8063;
@@ -480,6 +483,8 @@ body{
     color: white;
     font-size: 20px;
   }
+
+  /*"CREATE" button pop-up window*/
   .btn_create input {
     background-color: #8660c5;
     border: none;
@@ -494,12 +499,10 @@ body{
     font-family: 'Roboto', sans-serif;
     cursor: pointer;
   }
-
   .btn_create input:hover{
     background-color: #212529;
     color: #fff;
   }
-
   .btn_create input:active, .btn_create input:focus{
     outline: none;
   }
