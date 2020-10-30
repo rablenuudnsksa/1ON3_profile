@@ -27,14 +27,25 @@
 $(document).ready(function()
 {
     // Fuction that SHOWS pop-up window
-    $('.show_popup').click(function() { // Вызываем функцию по нажатию на кнопку
+    $('.show_popup1').click(function() { // Вызываем функцию по нажатию на кнопку
         var popup_id = $('#' + $(this).attr("rel")); // Связываем rel и popup_id
-        $('.popup').show(); // Открываем окно
-        $('.overlay_popup').show(); // Открываем блок заднего фона
+        $('.popup_create').show(); // Открываем окно
+        $('.overlay_popup_create').show(); // Открываем блок заднего фона
     });
     // Function that HIDES pop-up window
-    $('.overlay_popup').click(function() { // Обрабатываем клик по заднему фону
-        $('.overlay_popup, .popup').hide(); // Скрываем затемнённый задний фон и основное всплывающее окно
+    $('.overlay_popup_create').click(function() { // Обрабатываем клик по заднему фону
+        $('.overlay_popup_create, .popup_create').hide(); // Скрываем затемнённый задний фон и основное всплывающее окно
+    });
+
+    // Fuction that SHOWS pop-up window EDIT
+    $('.show_popup2').click(function() { // Вызываем функцию по нажатию на кнопку
+        var popup_id = $('#' + $(this).attr("rel")); // Связываем rel и popup_id
+        $('.popup_edit').show(); // Открываем окно
+        $('.overlay_popup_edit').show(); // Открываем блок заднего фона
+    });
+    // Function that HIDES pop-up window
+    $('.overlay_popup_edit').click(function() { // Обрабатываем клик по заднему фону
+        $('.overlay_popup_edit, .popup_edit').hide(); // Скрываем затемнённый задний фон и основное всплывающее окно
     });
 
                             /*BUTTONS*/
@@ -52,7 +63,14 @@ $(document).ready(function()
     $('.btn_create input').on("click", function(){
         ShowName();
         openPlaylistMenu();
-        $('.overlay_popup, .popup').hide();
+        $('.overlay_popup_create, .popup_create').hide();
+    });
+
+     // hides pop-up window and shows pl name
+     $('.btn_save input').on("click", function(){
+        ShowName();//???????????????????????????????????????
+        openPlaylistMenu();
+        $('.overlay_popup_edit, .popup_edit').hide();
     });
 
     /*Opens playlist form (featuring)*/
@@ -65,16 +83,54 @@ $(document).ready(function()
 });
 
 
+    // class Playlist
+    // {
+    //     constructor(playlistName)
+    //     {
+    //         this._playlistName = playlistName;
+    //     }
+        
+    //     get_plName()    //Getter for playlist Name
+    //     {
+    //         return this.playlistName;
+    //     }
+    //     set_playlistName(x)         //Setter for playlist name
+    //     {
+    //         this._playlistName = x;
+    //     }
+        
+    //     //Description
+    //     _playlistDescription;
+    //     set_playlistDescription(x){     //Setter
+    //         this._playlistDescription = x;
+    //     }
+    //     get_playlistDescription()       //Getter
+    //     {
+    //         return this._playlistDescription;
+    //     }
+
+
+    //     arrSongs = [];
+
+    // }
+
+    // class Song extends Playlist
+    // {
+
+    // }
+
+    let playlist1 = new Playlist("Linkin Park");
 /*Function that shows pl name in PL MENU*/
     function ShowName()
     {
         /*Reads pl NAME*/
-        let playlistName = $("#playlistName").val();
-        $("#plylstNm").html(playlistName);
+        //let playlistName = $("#playlistName").val();
+        //d$("#plylstNm").html(playlistName);
         
         // let playlistDescription = $("playlistDescription").val();
         // $("#plystDscrptn").html(playlistDescription);
     }
+    
 
     
     /* Set the width of the sidebar to 400px (show it) */

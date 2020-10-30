@@ -186,7 +186,7 @@ body{
 .openbtn, .openbtn:active, .openbtn:focus{
   outline: none;
 }
-.playlists .show_popup {/*Style of pl menu links*/
+.playlists .show_popup1 {/*Style of pl menu links*/
   position: absolute;
   color: white;
   top: 0;
@@ -372,7 +372,7 @@ body{
   }
 
   /*=================================POP-UP WINDOW========================*/
-   .overlay_popup {   /*BLACKOUT */
+   .overlay_popup_create {   /*BLACKOUT */
     display:none;   /*Hidden at start*/
     position:fixed;
     width: 100%;
@@ -387,7 +387,7 @@ body{
   }
 
   /*pop-up window*/
-  .popup {     
+  .popup_create {     
     display: none;
     position: absolute;
     top: 0;
@@ -403,6 +403,37 @@ body{
     background: #fff;
     padding: 50px 70px;
   }
+  /*=================================POP-UP WINDOW EDIT========================*/
+.overlay_popup_edit {   /*BLACKOUT */
+  display:none;   /*Hidden at start*/
+  position:fixed;
+  width: 100%;
+  height: 100%;
+  top:0;
+  right:0;
+  left:0;
+  bottom:0;
+  background:#000;    /*blackout*/
+  opacity:0.5;
+  /* overflow-y: scroll; ??????*/
+}
+/*pop-up window*/
+.popup_edit {     
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 600px;
+  height: 600px;
+  text-align: center;
+  border: 3px solid #8660c5;  /*border of pop-up window*/
+  color: #8660c5;   /*text color*/
+  background: #fff;
+  padding: 50px 70px;
+}
 
 
   /*===================================FORM=================================*/
@@ -504,6 +535,28 @@ body{
     color: #fff;
   }
   .btn_create input:active, .btn_create input:focus{
+    outline: none;
+  }
+  /*"SAVE" button pop-up window*/
+  .btn_save input {
+    background-color: #8660c5;
+    border: none;
+    color: #eaeaea;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    width: 300px;
+    height: 60px;
+    margin: 12px 0px;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+  }
+  .btn_save input:hover{
+    background-color: #212529;
+    color: #fff;
+  }
+  .btn_save input:active, .btn_save input:focus{
     outline: none;
   }
 

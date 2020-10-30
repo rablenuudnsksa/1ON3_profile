@@ -54,11 +54,14 @@
                             <!-- Cross bnt to close playlist menu -->
                             <a href="javascript:void(0)" class="closebtn">&times;</a>
                             <!-- First playlist -->
-                            <a href="javascript:void(0)" class="show_popup" rel="popup1">&#10010;</a>
-                            <a href="#"><label id="plylstNm"></label></a>
-                            <!-- <a href="#"><label id="plystDscrptn"></label></a> -->
-                            <a href="#">Playlist #2</a>
-                            <a href="#">Playlist #3</a>
+                            <a href="javascript:void(0)" class="show_popup1" rel="popup1">&#10010;</a>
+                            <div class="playlistNames">
+                                <a href="#"><label id="plylstNm"></label></a>
+                                <a href="javascript:void(0)" class="show_popup2" rel="popup2">EDIT</a>
+                                <!-- <a href="#"><label id="plystDscrptn"></label></a> -->
+                                <a href="#">Playlist #2</a>
+                                <a href="#">Playlist #3</a>
+                            </div>
                         </div>
                         <li><button class="openbtn"> my playlists</button></li>
                     </ul>
@@ -242,10 +245,10 @@
     <!--Pop-up window fop playlists list-->
     <div class="container">
         <!-- Blackout around the window -->
-        <div class="overlay_popup"></div>
+        <div class="overlay_popup_create"></div>
 
         <!-- POP-UP Window -->
-        <div class="popup" id="popup1">
+        <div class="popup_create" id="popup1">
 
             <div class="object">
 
@@ -274,6 +277,59 @@
                         <input type="button" value="Create" />
                     </div>
 
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!--Pop-up window fop playlists list-->
+    <div class="container">
+        <!-- Blackout around the window -->
+        <div class="overlay_popup_edit"></div>
+
+        <!-- POP-UP Window -->
+        <div class="popup_edit" id="popup2">
+
+            <div class="object">
+
+                <!-- Playlist form (name + description) -->
+                <form class="ui-form2" action="" method="">
+
+                    <!-- Header -->
+                    <div class="editPlaylistHeader">
+                        <h1 class="title3">Edit Playlist</h1>
+                    </div>
+
+                    <!-- Playlist NAME -->
+                    <div class="form-row">
+                        <input type="text" id="playlistName">
+                        <label for="Name">Name</label>
+                    </div>
+
+                    <!-- Playlist DESCRIPTION -->
+                    <div class="form-row">
+                        <input type="text" id="playlistDescription">
+                        <label for="Description">Description</label>
+                    </div>
+
+                    <!-- Song name -->
+                    <div class="form-row">
+                        <input type="text" id="playlistSong">
+                        <label for="Song">Song</label>
+                    </div>
+
+
+
+                    <!-- Artist -->
+                    <div class="form-row">
+                        <input type="text" id="playlistArtist">
+                        <label for="Artist">Artist</label>
+                    </div>
+
+                    <!-- button "SAVE" -->
+                    <div class="btn_save">
+                        <input type="button" value="Save" />
+                    </div>
                 </form>
             </div>
         </div>
