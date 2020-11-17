@@ -192,7 +192,12 @@ body{
   top: 0;
   font-size: 36px;
 }
-
+.playlists .show_popup2 {/*Style of pl menu links*/
+  position: center;
+  color: white;
+  top: 0;
+  font-size: 30px;
+}
 /*=================================BANNER===============================*/
 .banner{
     background-image: url(../img/banner.jpg);
