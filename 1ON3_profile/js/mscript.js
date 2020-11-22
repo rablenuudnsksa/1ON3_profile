@@ -43,24 +43,25 @@ $(document).ready(function()
     // Button "Create" in pop-up window (opens pl menu,
     // hides pop-up window and shows pl name
     $('.btn_create input').on("click", function(){
-        openPlaylistMenu();
-        $('.overlay_popup_create, .popup_create').hide();
-
-
-
         //Gets playlist name from input
         let name_playlist = document.getElementById("playlistName").value;
         //Playlist name
         playlists[i] = new Playlist(name_playlist); //Creates new playlist
         console.log(playlists[i].get_playlistName()); //Gets name
-        
         //Gets playlist description from input
         let description_playlist = document.getElementById("playlistDescription").value;
         //Playlist description
         playlists[i].set_playlistDescription(description_playlist);
         console.log(playlists[i].get_playlistDescription());
-
+        //Prints the name of playlist in playlistNames div
+        printPlaylist(name_playlist);
         i++;
+        //Clear forms
+        $(this).closest('form')[0].reset();
+
+        openPlaylistMenu();
+        $('.overlay_popup_create, .popup_create').hide();
+        
     });
 
      // hides pop-up window and shows pl name
@@ -156,7 +157,12 @@ $(document).ready(function()
 
     }
 
-    
+    //Shows new playlist
+function printPlaylist(nameOfPlaylist) {
+    let newElement = document.createElement('div');
+    newElement.innerHTML = `<a href = "#" class = "Playlist${i}"> ${nameOfPlaylist} </a>`;
+    listOfPlaylist.prepend(newElement);
+}
     /* Set the width of the sidebar to 400px (show it) */
 function openPlaylistMenu() {
     document.getElementById("myPlaylists").style.width = "400px";
