@@ -5,27 +5,27 @@
 $(document).ready(function()
 {
     // Fuction that SHOWS pop-up window
-    $('.show_popup1').click(function() { // Вызываем функцию по нажатию на кнопку
-        var popup_id = $('#' + $(this).attr("rel")); // Связываем rel и popup_id
+    $('.show_popup1').on("click", function() { // Вызываем функцию по нажатию на кнопку
+        let popup_id = $('#' + $(this).attr("rel")); // Связываем rel и popup_id
         $('.popup_create').show(); // Открываем окно
         $('.overlay_popup_create').show(); // Открываем блок заднего фона
         closePlaylistMenu();
 
     });
     // Function that HIDES pop-up window
-    $('.overlay_popup_create').click(function() { // Обрабатываем клик по заднему фону
+    $('.overlay_popup_create').on("click", function() { // Обрабатываем клик по заднему фону
         $('.overlay_popup_create, .popup_create').hide(); // Скрываем затемнённый задний фон и основное всплывающее окно
     });
 
     // Fuction that SHOWS pop-up window EDIT
-    $('.show_popup2').click(function() { // Вызываем функцию по нажатию на кнопку
-        var popup_id = $('#' + $(this).attr("rel")); // Связываем rel и popup_id
+    $('#listOfPlaylist').on("click", ".show_popup2" ,function() { // Вызываем функцию по нажатию на кнопку
+        let popup_id = $('#' + $(this).attr("rel")); // Связываем rel и popup_id
         $('.popup_edit').show(); // Открываем окно
         $('.overlay_popup_edit').show(); // Открываем блок заднего фона
         closePlaylistMenu();
     });
     // Function that HIDES pop-up window
-    $('.overlay_popup_edit').click(function() { // Обрабатываем клик по заднему фону
+    $('.overlay_popup_edit').on("click", function() { // Обрабатываем клик по заднему фону
         $('.overlay_popup_edit, .popup_edit').hide(); // Скрываем затемнённый задний фон и основное всплывающее окно
         
     });
@@ -157,7 +157,6 @@ $(document).ready(function()
 function printPlaylist(nameOfPlaylist) {
     let newElement = document.createElement('div');
     newElement.innerHTML = `
-    <div class="container">
     <div class="row">
     <div class="col">
     <a href = "#" class = "Playlist${i}"> ${nameOfPlaylist} </a>
@@ -193,10 +192,10 @@ function openPlaylistMenu() {
     // Close the dropdown if the user clicks outside of it
     window.onclick = function (event) {
         if (!event.target.matches('.dropbtn')) {
-            var dropdowns = document.getElementsByClassName("dropdown-content");
-            var i;
+            let dropdowns = document.getElementsByClassName("dropdown-content");
+            let i;
             for (i = 0; i < dropdowns.length; i++) {
-                var openDropdown = dropdowns[i];
+                let openDropdown = dropdowns[i];
                 if (openDropdown.classList.contains('show')) {
                     openDropdown.classList.remove('show');
                 }
