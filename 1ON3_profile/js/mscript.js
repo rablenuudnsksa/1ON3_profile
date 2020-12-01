@@ -188,6 +188,9 @@ function openPlaylistMenu() {
     function dropdownScript() {
         document.getElementById("myDropdown").classList.toggle("show");
     }
+    function dropdownScript1() {
+        document.getElementById("myDropdown1").classList.toggle("show");
+    }
 
     // Close the dropdown if the user clicks outside of it
     window.onclick = function (event) {
