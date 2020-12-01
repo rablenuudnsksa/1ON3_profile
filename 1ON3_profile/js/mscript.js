@@ -5,27 +5,27 @@
 $(document).ready(function()
 {
     // Fuction that SHOWS pop-up window
-    $('.show_popup1').on("click", function() { // Вызываем функцию по нажатию на кнопку
-        let popup_id = $('#' + $(this).attr("rel")); // Связываем rel и popup_id
+    $('.show_popup1').click(function() { // Вызываем функцию по нажатию на кнопку
+        var popup_id = $('#' + $(this).attr("rel")); // Связываем rel и popup_id
         $('.popup_create').show(); // Открываем окно
         $('.overlay_popup_create').show(); // Открываем блок заднего фона
         closePlaylistMenu();
 
     });
     // Function that HIDES pop-up window
-    $('.overlay_popup_create').on("click", function() { // Обрабатываем клик по заднему фону
+    $('.overlay_popup_create').click(function() { // Обрабатываем клик по заднему фону
         $('.overlay_popup_create, .popup_create').hide(); // Скрываем затемнённый задний фон и основное всплывающее окно
     });
 
     // Fuction that SHOWS pop-up window EDIT
-    $('#listOfPlaylist').on("click", ".show_popup2" ,function() { // Вызываем функцию по нажатию на кнопку
-        let popup_id = $('#' + $(this).attr("rel")); // Связываем rel и popup_id
+    $('.show_popup2').click(function() { // Вызываем функцию по нажатию на кнопку
+        var popup_id = $('#' + $(this).attr("rel")); // Связываем rel и popup_id
         $('.popup_edit').show(); // Открываем окно
         $('.overlay_popup_edit').show(); // Открываем блок заднего фона
         closePlaylistMenu();
     });
     // Function that HIDES pop-up window
-    $('.overlay_popup_edit').on("click", function() { // Обрабатываем клик по заднему фону
+    $('.overlay_popup_edit').click(function() { // Обрабатываем клик по заднему фону
         $('.overlay_popup_edit, .popup_edit').hide(); // Скрываем затемнённый задний фон и основное всплывающее окно
         
     });
@@ -40,12 +40,16 @@ $(document).ready(function()
         closePlaylistMenu();
     });
     
-                            /*Button "CREATE" in pop-up window*/
-    $('.btn_create input').on("click", function()
-    {
+    // Button "Create" in pop-up window (opens pl menu,
+    // hides pop-up window and shows pl name
+    $('.btn_create input').on("click", function(){
+        openPlaylistMenu();
+        $('.overlay_popup_create, .popup_create').hide();
+
+
+
         //Gets playlist name from input
         let name_playlist = document.getElementById("playlistName").value;
-        
         //Playlist name
         playlists[i] = new Playlist(name_playlist); //Creates new playlist
         console.log(playlists[i].get_playlistName()); //Gets name
@@ -55,27 +59,26 @@ $(document).ready(function()
         //Playlist description
         playlists[i].set_playlistDescription(description_playlist);
         console.log(playlists[i].get_playlistDescription());
-        
-        //Prints the name of playlist in playlistNames div
-        printPlaylist(name_playlist);
-        i++;
-        
-        //Clear forms
-        $(this).closest('form')[0].reset();
 
-        openPlaylistMenu(); //Opens Playlist menu
-        $('.overlay_popup_create, .popup_create').hide();   //Hides pop-up window
-        
+        i++;
     });
 
      // hides pop-up window and shows pl name
-     $('.btn_save').on("click", function(){
-        
+     $('.btn_save input').on("click", function(){
+        ShowName();//???????????????????????????????????????
         openPlaylistMenu();
         $('.overlay_popup_edit, .popup_edit').hide();
     });
 
+    /*Opens playlist form (featuring)*/
+    $("#plylstNm").on('click', function()
+    {
+        closePlaylistMenu();
 
+    });
+
+
+    
 });
     //Counter of playlists
     let i = 0;
@@ -153,23 +156,8 @@ $(document).ready(function()
 
     }
 
-    /*Shows new playlist in Playlist menu*/
-function printPlaylist(nameOfPlaylist) {
-    let newElement = document.createElement('div');
-    newElement.innerHTML = `
-    <div class="row">
-    <div class="col">
-    <a href = "#" class = "Playlist${i}"> ${nameOfPlaylist} </a>
-    </div>
-    <div class="col">
-    <a href="javascript:void(0)" id="Edit${i}" class="show_popup2" rel="popup2">&#9998;</a>
-    </div>
-    </div>`;
     
-    listOfPlaylist.prepend(newElement); 
-}
-    
-/* Set the width of the sidebar to 400px (show it) */
+    /* Set the width of the sidebar to 400px (show it) */
 function openPlaylistMenu() {
     document.getElementById("myPlaylists").style.width = "400px";
   }
@@ -179,8 +167,6 @@ function openPlaylistMenu() {
     document.getElementById("myPlaylists").style.width = "0";
   }
 
-  
-/*=================================================================================== */
   /*Dropdownscript*/
 
 /* When the user clicks on the button, 
@@ -188,6 +174,7 @@ function openPlaylistMenu() {
     function dropdownScript() {
         document.getElementById("myDropdown").classList.toggle("show");
     }
+
     function dropdownScript1() {
         document.getElementById("myDropdown1").classList.toggle("show");
     }
@@ -195,15 +182,17 @@ function openPlaylistMenu() {
     // Close the dropdown if the user clicks outside of it
     window.onclick = function (event) {
         if (!event.target.matches('.dropbtn')) {
-            let dropdowns = document.getElementsByClassName("dropdown-content");
-            let i;
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
             for (i = 0; i < dropdowns.length; i++) {
-                let openDropdown = dropdowns[i];
+                var openDropdown = dropdowns[i];
                 if (openDropdown.classList.contains('show')) {
                     openDropdown.classList.remove('show');
                 }
             }
         }
     }
+
+    
 
         
